@@ -28,11 +28,40 @@
 
 / {
     behaviors {
-        td0: td0 {
+        tab_esc: tab_esc {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Shift/Caps Lock Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp ESC>;
+
+            label = "TAB_ESC";
+        };
+
+        tab_s_tab: tab_s_tab {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Shift/Caps Lock Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp LS(TAB)>;
+
+            label = "TAB_S_TAB";
+        };
+
+        enter_win: enter_win {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Shift/Caps Lock Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER>, <&kp LS(ESCAPE)>;
+
+            label = "ENTER_WIN";
+        };
+
+        Shift_CAPS: Shift_CAPS {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+
+            label = "SHIFT_CAPS";
         };
     };
 
@@ -56,10 +85,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E         &kp R        &kp T                           &kp UP                &kp Y        &kp U        &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S  &kp D         &kp F        &kp G                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J        &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C         &kp V        &kp B        &none              &kp DOWN              &kp N        &kp M        &kp COMMA  &kp DOT  &kp FSLH  &mt LEFT_WIN ENTER
-                         &kp LEFT_ALT  &lt 1 SPACE  &lt 3 ENTER                                           &lt 3 SPACE  &lt 2 SPACE  &kp TAB
+&tab_esc     &kp Q  &kp W  &kp E         &kp R        &kp T                           &kp UP                &kp Y        &kp U        &kp I      &kp O    &kp P     &kp BSPC
+&Shift_CAPS  &kp A  &kp S  &kp D         &kp F        &kp G                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J        &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL    &kp Z  &kp X  &kp C         &kp V        &kp B        &none              &kp DOWN              &kp N        &kp M        &kp COMMA  &kp DOT  &kp FSLH  &enter_win
+                           &kp LEFT_ALT  &lt 1 SPACE  &lt 3 ENTER                                           &lt 3 SPACE  &lt 2 SPACE  &kp TAB
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -90,10 +119,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&studio_unlock  &kp F1           &kp F2           &kp F3                           &kp F4           &kp F5                                         &mmv MOVE_UP                     &kp F6                          &kp F7           &kp F8     &kp F9           &kp F10          &kp F11
-&trans          &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1                     &bt BT_SEL 2     &out OUT_BLE                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &rgb_ug RGB_HUD                 &rgb_ug RGB_HUI  &kp UP     &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &kp F12
-&trans          &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_COLOR_HSB(27,73,64)  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_COLOR_HSB(0,71,82)  &kp LEFT         &kp DOWN   &kp RIGHT        &kp C_VOL_DN     &kp C_VOLUME_UP
-                                                  &trans                           &trans           &trans                                                                          &trans                          &trans           &kp ENTER
+&studio_unlock  &kp F1           &kp F2           &kp F3                           &kp F4           &kp F5                                         &mmv MOVE_UP                     &kp F6                          &kp F7           &kp F8    &kp F9           &kp F10          &kp F11
+&trans          &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1                     &bt BT_SEL 2     &out OUT_BLE                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &rgb_ug RGB_HUD                 &rgb_ug RGB_HUI  &kp UP    &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &kp F12
+&trans          &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_COLOR_HSB(27,73,64)  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_COLOR_HSB(0,71,82)  &kp LEFT         &kp DOWN  &kp RIGHT        &kp C_VOL_DN     &kp C_VOLUME_UP
+                                                  &trans                           &trans           &trans                                                                          &trans                          &trans           &trans
             >;
         };
     };
