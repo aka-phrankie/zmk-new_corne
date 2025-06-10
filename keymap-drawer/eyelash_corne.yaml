@@ -97,7 +97,7 @@ layers:
   - $$mdi:keyboard-space$$
   - INS
   - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+$$mdi:keyboard-tab$$
+  - $$mdi:keyboard-tab-reverse$$
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
