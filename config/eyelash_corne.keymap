@@ -72,17 +72,15 @@
 &kp LCTRL    &kp Z  &kp X  &kp C         &kp V        &kp B        &none              &kp DOWN              &kp N        &kp M        &kp COMMA   &kp DOT  &kp FSLH  &kp TAB
                            &kp LEFT_ALT  &lt 1 SPACE  &lt 3 ENTER                                           &lt 3 SPACE  &lt 2 SPACE  &enter_win
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp TAB      &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                              &none                       &kp N6    &kp N7    &kp N8       &kp N9     &kp N0    &kp DEL
-&kp LS(TAB)  &kp N4  &kp N5  &kp N6  &none   &none               &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp LEFT  &kp DOWN  &kp UP       &kp RIGHT  &kp HOME  &kp PG_UP
-&trans       &kp N7  &kp N8  &kp N9  &kp N0  &none      &none                    &none                       &trans    &trans    &trans       &trans     &kp END   &kp PG_DN
-                             &kp N0  &trans  &kp SPACE                                                       &kp INS   &trans    &kp LS(TAB)
+&kp TAB      &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                              &none                       &kp N6    &kp N7    &kp N8  &kp N9     &kp N0    &kp DEL
+&kp LS(TAB)  &kp N4  &kp N5  &kp N6  &none   &none               &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp PG_UP
+&trans       &kp N7  &kp N8  &kp N9  &kp N0  &none      &none                    &none                       &trans    &trans    &trans  &trans     &kp END   &kp PG_DN
+                             &kp N0  &trans  &kp SPACE                                                       &kp INS   &trans    &trans
             >;
         };
 
