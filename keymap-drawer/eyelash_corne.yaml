@@ -42,13 +42,13 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - '&enter_win'
+  - $$mdi:keyboard-tab$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-space$$', h: NUMBER}
   - {t: '$$mdi:keyboard-return$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
-  - $$mdi:keyboard-tab$$
+  - '&enter_win'
   NUMBER:
   - $$mdi:keyboard-tab$$
   - {t: '1', s: '!'}
