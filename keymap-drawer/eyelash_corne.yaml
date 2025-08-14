@@ -7,7 +7,7 @@ layers:
   - E
   - R
   - T
-  - $$mdi:arrow-up-bold$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - Y
   - U
   - I
@@ -20,9 +20,9 @@ layers:
   - D
   - F
   - G
-  - $$mdi:arrow-left-bold$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:arrow-right-bold$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - H
   - J
   - K
@@ -35,8 +35,8 @@ layers:
   - C
   - V
   - B
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:arrow-down-bold$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - N
   - M
   - {t: ',', s: <}
@@ -97,7 +97,7 @@ layers:
   - $$mdi:keyboard-space$$
   - INS
   - {t: '$$mdi:transfer$$', type: trans}
-  - LEFT WIN
+  - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
@@ -146,7 +146,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - LEFT WIN
   Fn:
   - '&studio_unlock'
   - F1
@@ -184,7 +184,7 @@ layers:
   - RGB BRI
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - RGB COLOR HSB(342,52,80)
+  - RGB COLOR HSB(342,89,33)
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
@@ -195,4 +195,4 @@ layers:
   - {type: held}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
-  - MUTE
+  - {t: '$$mdi:transfer$$', type: trans}
