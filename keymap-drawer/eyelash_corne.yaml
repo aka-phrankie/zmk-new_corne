@@ -46,9 +46,9 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-space$$', h: NUMBER}
   - {t: '$$mdi:keyboard-return$$', h: Fn}
-  - {t: '$$mdi:keyboard-space$$', h: Fn}
+  - {t: '$$mdi:keyboard-return$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
-  - '&enter_win'
+  - $$mdi:keyboard-space$$
   NUMBER:
   - $$mdi:keyboard-tab$$
   - {t: '1', s: '!'}
@@ -97,7 +97,7 @@ layers:
   - $$mdi:keyboard-space$$
   - INS
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - LEFT WIN
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
@@ -184,7 +184,7 @@ layers:
   - RGB BRI
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - RGB COLOR HSB(0,71,82)
+  - RGB COLOR HSB(342,52,80)
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
@@ -195,4 +195,4 @@ layers:
   - {type: held}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - MUTE
