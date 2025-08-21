@@ -14,7 +14,7 @@ layers:
   - O
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
-  - '&Shift_CAPS'
+  - $$mdi:apple-keyboard-shift$$
   - A
   - S
   - D
@@ -50,7 +50,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
   - $$mdi:keyboard-space$$
   NUMBER:
-  - $$mdi:keyboard-tab$$
+  - $$mdi:apple-keyboard-caps$$
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -63,12 +63,12 @@ layers:
   - {t: '9', s: (}
   - {t: '0', s: )}
   - $$mdi:backspace-reverse-outline$$
-  - $$mdi:keyboard-tab-reverse$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:keyboard-tab-reverse$$
+  - $$mdi:keyboard-tab$$
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
@@ -179,12 +179,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB TOG
   - RGB EFF
-  - RGB COLOR HSB(27,54,77)
+  - RGB COLOR HSB(124,100,86)
   - RGB BRD
   - RGB BRI
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - RGB COLOR HSB(342,68,84)
+  - RGB COLOR HSB(235,61,86)
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
