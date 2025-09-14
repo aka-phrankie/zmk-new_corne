@@ -162,7 +162,7 @@ layers:
   - F10
   - F11
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:bluetooth-off$$
+  - BT CLR ALL
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
@@ -179,7 +179,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB TOG
   - RGB EFF
-  - RGB COLOR HSB(124,100,86)
+  - RGB COLOR HSB(27,100,86)
   - RGB BRD
   - RGB BRI
   - {t: '$$mdi:transfer$$', type: trans}
