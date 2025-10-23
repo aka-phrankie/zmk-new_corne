@@ -55,6 +55,15 @@
 
     combos { compatible = "zmk,combos"; };
 
+    macros {
+        Lbrackets: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>;
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -73,10 +82,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp TAB      &kp N1  &kp N2  &kp N3  &kp N4       &kp N5                                      &mmv MOVE_UP                     &kp N6    &kp N7    &kp N8  &kp N9     &kp N0    &kp DELETE
-&kp LS(TAB)  &kp N4  &kp N5  &kp N6  &kp LS(TAB)  &kp TAB                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp PG_UP
-&trans       &kp N7  &kp N8  &kp N9  &kp N0       &kp KP_DOT    &kp C_MUTE                    &mmv MOVE_DOWN                   &trans    &trans    &trans  &trans     &kp END   &kp PG_DN
-                             &kp N0  &trans       &kp CAPSLOCK                                                                 &kp INS   &trans    &trans
+&kp TAB  &kp N1  &kp N2  &kp N3  &kp N4       &kp N5                                      &mmv MOVE_UP                     &kp N6    &kp N7    &kp N8  &kp N9     &kp N0    &kp DELETE
+&trans   &kp N4  &kp N5  &kp N6  &kp LS(TAB)  &kp TAB                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp PG_UP
+&trans   &kp N7  &kp N8  &kp N9  &kp N0       &kp KP_DOT    &kp C_MUTE                    &mmv MOVE_DOWN                   &trans    &trans    &trans  &trans     &kp END   &kp PG_DN
+                         &kp N0  &trans       &kp CAPSLOCK                                                                 &kp INS   &trans    &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -85,10 +94,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK     &kp LPAR  &kp RPAR  &trans
-&trans  &trans    &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT      &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &trans    &trans     &trans     &trans     &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC      &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp R      &trans     &kp DOT                                                               &kp DOT    &trans     &kp LEFT_WIN
+&trans  &kp EXCL  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT                             &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK     &kp LPAR  &kp RPAR  &trans
+&trans  &trans    &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT      &kp RBKT  &kp BSLH  &kp GRAVE
+&trans  &trans    &trans     &trans     &trans     &Lbrackets  &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC      &kp RBRC  &kp PIPE  &kp TILDE
+                             &kp R      &trans     &kp DOT                                                                &kp DOT    &trans     &kp LEFT_WIN
             >;
 
             sensor-bindings = <&scroll_encoder>;
