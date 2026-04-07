@@ -52,7 +52,14 @@
         tap-ms = <100>;
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        softoff {
+            bindings = <&soft_off>;
+            key-positions = <1 15 29>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -66,7 +73,7 @@
                               &kp LALT  &lt 1 SPACE  &lt 3 ENTER                                               &lt 3 ENTER  &lt 2 SPACE  &kp SPACE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         lower_layer {
@@ -101,6 +108,8 @@
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp LOCKING_NUM  &kp LEFT_ARROW                    &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C_VOL_DN     &kp C_VOLUME_UP
                                                    &trans           &trans           &trans                                                                          &trans           &trans                            &trans
             >;
+
+            sensor-bindings = <&scroll_encoder>;
         };
     };
 };
