@@ -171,7 +171,7 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - OUT USB
-  - RGB COLOR HSB(129,14,86)
+  - RGB COLOR HSB(37,48,84)
   - $$mdi:arrow-up-bold$$
   - RGB SAD
   - RGB SAI
@@ -184,7 +184,7 @@ layers:
   - RGB HUI
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - LOCKING NUM
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
