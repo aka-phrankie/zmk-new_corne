@@ -14,44 +14,7 @@
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
-&msc {
-    acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <100>;       // 300
-    delay-ms = <0>;                   // 0
-};
-
-&mmv {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <1>;
-    trigger-period-ms = <16>;
-};
-
-&soft_off { hold-time-ms = <2000>; };
-
 / {
-    behaviors {
-        td0: td0 {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
-        };
-    };
-
-    rgb_encoder: rgb_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
-    };
-
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-        tap-ms = <100>;
-    };
-
     combos {
         compatible = "zmk,combos";
 
@@ -72,8 +35,6 @@
 &kp LCTRL       &kp Z  &kp X  &kp C     &kp V        &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M        &kp COMMA  &kp DOT  &kp FSLH  &kp TAB
                               &kp LALT  &lt 1 SPACE  &lt 3 ENTER                                               &lt 3 ENTER  &lt 2 SPACE  &kp SPACE
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         lower_layer {
@@ -84,8 +45,6 @@
 &trans   &kp N7  &kp N8  &kp N9  &kp N0       &kp KP_DOT    &kp C_MUTE                    &mmv MOVE_DOWN                   &trans    &trans    &trans  &trans     &kp END   &kp PG_DN
                          &trans  &trans       &kp CAPSLOCK                                                                 &kp INS   &trans    &trans
             >;
-
-            sensor-bindings = <&scroll_encoder>;
         };
 
         raise_layer {
@@ -96,8 +55,6 @@
 &trans  &trans    &trans  &trans    &trans    &trans     &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC      &kp RBRC  &kp PIPE  &kp TILDE
                           &kp R     &trans    &kp DOT                                                               &kp DOT    &trans     &kp LEFT_WIN
             >;
-
-            sensor-bindings = <&scroll_encoder>;
         };
 
         layer_3 {
@@ -106,10 +63,8 @@
 &trans           &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                                         &mmv MOVE_UP                     &kp F6        &kp F7                           &kp F8          &kp F9           &kp F10          &kp F11
 &trans           &bt BT_CLR_ALL   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &out OUT_BLE                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &out OUT_USB  &rgb_ug RGB_COLOR_HSB(37,48,84)  &kp UP_ARROW    &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &kp F12
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &kp C_MUTE                    &mmv MOVE_DOWN                   &none         &kp LEFT_ARROW                   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C_VOL_DN     &kp C_VOLUME_UP
-                                                   &trans           &trans           &trans                                                                          &trans        &trans                           &trans
+                                                   &kp LC(SPACE)    &trans           &trans                                                                          &trans        &trans                           &trans
             >;
-
-            sensor-bindings = <&scroll_encoder>;
         };
     };
 };
